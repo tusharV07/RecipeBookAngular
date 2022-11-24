@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button (click)="onNewRecipe()" class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<hr>
+
+<h4 class="text-info">Recipes</h4>
+<div class="row">
+    <div class="col-xs-12" style="overflow-wrap:break-word;">
+        <!-- <app-recipe-item
+        *ngFor="let recipe of recipes"
+        [fetchRecipe]="recipe"
+        (recipeSelected)="onRecipeSelected(recipe)"></app-recipe-item> -->
+        <app-recipe-item
+        *ngFor="let recipe of recipes;index as i"
+        [fetchRecipe]="recipe"
+        [index]="i"></app-recipe-item>
+    </div>
+</div>
+
+

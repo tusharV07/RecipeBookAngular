@@ -1,0 +1,7 @@
+.colorHead{
+    font-size: medium;
+    color: black !important;
+    background-color: white !important;
+    text-shadow: 0.7px 0 black;
+    border-bottom: 0.5px solid black;
+}

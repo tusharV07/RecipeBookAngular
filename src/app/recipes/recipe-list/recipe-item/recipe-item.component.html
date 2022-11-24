@@ -1,0 +1,12 @@
+<!-- <a class="list-group-item clearfix" style="margin-bottom: 5px; cursor: pointer;"
+(click)="onSelected()"> -->
+<a class="list-group-item clearfix"
+routerLinkActive="active"
+[routerLink]="[index]" 
+style="margin-bottom: 5px; cursor: pointer;">
+    <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+    <h5 class="list-group-item-text text-dark">{{recipe.desc}}</h5>
+    <div style="margin-top: 5px;margin-left:40%;">
+        <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive" style="max-height:75px; border-radius: 5%;">
+    </div>
+</a>
