@@ -13,13 +13,13 @@ export class DataStorageService {
 
   storeRecipes(){
     const recipes=this.recSer.getRecipe()
-    this.http.put('https://recipebook-b7c7b-default-rtdb.firebaseio.com/recipes.json',recipes).subscribe(resp=>{
+    this.http.put('enter firebase database url',recipes).subscribe(resp=>{
       console.log('recipes saved')
     })
   }
 
   fetchRecipes(){
-    return this.http.get<Recipe[]>('https://recipebook-b7c7b-default-rtdb.firebaseio.com/recipes.json')
+    return this.http.get<Recipe[]>('enter firebase database url')
     .pipe(map(recipes=>{
       return recipes.map(recipe=>{
         return {...recipe,
